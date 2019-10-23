@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XX Client Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+
+    <!-- Google Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- bootstrap -->
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ -->
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" id="signup-form" class="signup-form" action="post.php">
+                <div>
+                    <h3>Home</h3>
+                    <fieldset>
+
+                        <!-- <p class="desc">Please enter your infomation and proceed to next step so we can build your account</p> -->
+                        <div class="fieldset-content">
+
+                            <div class="form-row">
+                                <h2>Client Name</h2>
+                                <input type="text" style="text-transform: uppercase;" name="client_name" >
+
+                            </div> <br>
+
+                            <div class="form-row">
+                                <div class="form-flex">
+                                    <div class="form-group">
+                                        <label class="form-label">Rep Assigned</label>
+                                            <select name="rep_assigned" id="rep_assigned" >
+                                                <option value=""></option>
+                                                <option value="Person 1">Person 1</option>
+                                                <option value="Person 2">Person 2</option>
+                                                <option value="Person 3">Person 3</option>
+                                                <option value="Person 4">Person 4</option>
+                                            </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Client profile</label>
+                                            <select name="client_profile" id="client_profile" >
+                                                <option value=""></option>
+                                                <option value="Product 1">Product 1</option>
+                                                <option value="Product 2">Product 2</option>
+                                                <option value="Product 3 ">Product 3</option>
+                                            </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Client City</label>
+                                            <select name="client_city" id="client_city" >
+                                                <option value=""></option>
+                                                    <optgroup label="Australia">
+                                                        <option value="Adelaide">Adelaide</option>
+                                                        <option value="Brisbane">Brisbane</option>
+                                                        <option value="Canberra">Canberra</option>
+                                                        <option value="Gold Coast">Gold Coast</option>
+                                                        <option value="Melbourne">Melbourne</option>
+                                                        <option value="Newcastle">Newcastle</option>
+                                                        <option value="Perth">Perth</option>
+                                                        <option value="Sydney">Sydney</option>
+                                                    </optgroup>
+                                                    <optgroup label="New Zealand">
+                                                        <option value="Auckland">Auckland</option>
+                                                        <option value="Christchurch">Christchurch</option>
+                                                        <option value="Wellington">Wellington</option>
+                                                    </optgroup>
+                                                    <optgroup label="Fiji">
+                                                        <option value="Suva">Suva</option>
+                                                        <option value="Lautoka">Lautoka</option>
+                                                        <option value="Nadi">Nadi</option>
+                                                    </optgroup>
+                                                    <optgroup label="Papua New Guinea"> 
+                                                        <option value="Port Moresby">Port Moresby</option>
+                                                        <option value="Lae">Lae</option>
+                                                    </optgroup>
+                                            </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Client Country</label>
+                                            <select name="client_country" id="client_country">
+                                                <option value=""></option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Fiji">Fiji</option>
+                                                <option value="New Zealand">New Zealand</option>
+                                                <option value="Papua New Guinea">Papua New Guinea</option>
+                                            </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="box-middatae">
+                                <h4>REVENUE SUMMARY</h4>
+                            </div>
+
+                            <div class="form-row">
+                              <div class="form-flex">
+                                    <div class="form-group"  style="outline-style: solid; outline-color:  #C4C3C1; outline-width: 1px;">
+                                        <label class="form-label"><h4>XXX/REFERENCE</h4></label>
+                                        <label class="form-label">$</label>
+                                        <input disabled type="number" name="data_revenue" id="data_revenue" placeholder="$"/>              
+                                    </div>
+
+                                    <div class="form-group"  style="outline-style: solid; outline-color:  #C4C3C1; outline-width: 1px;">
+                                        <label class="form-label"><h4>EVAL/PRICING </h4></label>
+                                         <label class="form-label">EVAL Cash $ </label>
+                                            <input disabled type="number" name="EVAL_cash_revenue" id="EVAL_cash_revenue" placeholder="$" />
+                                        <label class="form-label">EVAL OTC $ </label>
+                                            <input disabled type="number" name="EVAL_otc_revenue" id="EVAL_otc_revenue" placeholder="$" />
+                                        <label class="form-label">Pricing/Reg $</label>
+                                            <input disabled type="number" name="EVAL_pricing_revenue" id="EVAL_pricing_revenue" placeholder="$" />   
+                                        <br>                                               
+                                    </div>
+
+                                    <div class="form-group" style="outline-style: solid; outline-color:  #C4C3C1; outline-width: 1px;">
+                                        <label class="form-label"><h4>REAL TIME </h4></label>
+                                        <label class="form-label">API $ </label>
+                                            <input disabled type="number" name="realtime_API_revenue" id="realtime_API_revenue" placeholder="$" />
+                                        <label class="form-label">PIPE $</label>
+                                            <input disabled type="number" name="realtime_PIPE_revenue" id="realtime_PIPE_revenue" placeholder="$" />       
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="box-middatae">
+                                <h4>ACCOUNT DETAIL</h4>
+                            </div>
+
+                            <div class="form-row">
+                              <div class="form-flex">
+                                    <div class="form-group" style="outline-style: solid; outline-color: #C4C3C1;outline-width: 1px;">
+                                        <label class="form-label"><h4>LICENSE/REFERENCE</h4></label>
+                                            <label class="form-label"> <i class="material-icons" style="font-size:20px;color:lightblue;text-shadow:2px 2px 4px #000000;">cloud</i>Master Data </label><br>
+                                            <table id="" class="tablesorter" id="ticketLinesTable">
+                                                <thead>
+                                                    <tr style="background-color: #8C8984;color: black;">
+                                                        <th>Account Number</th>
+                                                        <th>Revenue</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="">
+                                                    <tr>
+                                                        <td><input type="number" name="input_data8" id="input_data8"/></td>
+                                                        <td><input type="number" id="data_revenue_data8" name="data_revenue_data8" placeholder="$" onchange="calc_data()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_data9" id="input_data9"/></td>
+                                                        <td><input type="number" id="data_revenue_data9" name="data_revenue_data9" placeholder="$" onchange="calc_data()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_data10" id="input_data10"/></td>
+                                                        <td><input type="number" id="data_revenue_data10" name="data_revenue_data10" placeholder="$" onchange="calc_data()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_data11" id="input_data11"/></td>
+                                                        <td><input type="number" id="data_revenue_data11" name="data_revenue_data11" placeholder="$" onchange="calc_data()"/></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                    </div>
+
+                                    <div class="form-group" style="outline-style: solid; outline-color:#C4C3C1;outline-width: 1px;">
+                                        <label class="form-label"><h4>EVAL/PRICING</h4></label>
+                                        <label class="form-label"> <i class="material-icons" style="font-size:20px;color:green;text-shadow:2px 2px 4px #000000;">computer</i>EVAL Cash </label><br>
+
+                                        <table id="" class="tablesorter" id="ticketLinesTable">
+                                                <thead>
+                                                    <tr style="background-color: #8C8984;color: black;">
+                                                        <th>Account Number</th>
+                                                        <th>Revenue</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="">
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv0" id="input_val_serv0"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv0" id="val_serv_revenue_val_serv0" placeholder="$" onchange="calc_EVAL_cash()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv1" id="input_val_serv1"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv1" id="val_serv_revenue_val_serv1"  placeholder="$" onchange="calc_EVAL_cash()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv2" id="input_val_serv2"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv2" id="val_serv_revenue_val_serv2" placeholder="$" onchange="calc_EVAL_cash()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv3" id="input_val_serv3"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv3" id="val_serv_revenue_val_serv3"  placeholder="$" onchange="calc_EVAL_cash()" /></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        <br>
+                                        <label class="form-label"> <i class="material-icons" style="font-size:20px;color:green;text-shadow:2px 2px 4px #000000;">computer</i>EVAL OTC </label><br>
+
+                                        <table id="" class="tablesorter" id="ticketLinesTable">
+                                                <thead>
+                                                    <tr style="background-color: #8C8984;color: black;">
+                                                        <th>Account Number</th>
+                                                        <th>Revenue</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="">
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv4" id="input_val_serv4"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv4" id="val_serv_revenue_val_serv4" placeholder="$" onchange="calc_EVAL_otc()" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv5" id="input_val_serv5"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv5" id="val_serv_revenue_val_serv5" placeholder="$" onchange="calc_EVAL_otc()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv6" id="input_val_serv6"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv6" id="val_serv_revenue_val_serv6" placeholder="$" onchange="calc_EVAL_otc()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv7" id="input_val_serv7"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv7" id="val_serv_revenue_val_serv7" placeholder="$" onchange="calc_EVAL_otc()"/></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        <br>
+                                        <label class="form-label"> <i class="material-icons" style="font-size:20px;color:green;text-shadow:2px 2px 4px #000000;">computer</i>Pricing/Regulatory </label> <br>
+
+                                        <table id="" class="tablesorter" id="ticketLinesTable">
+                                                <thead>
+                                                    <tr style="background-color: #8C8984;color: black;">
+                                                        <th>Account Number</th>
+                                                        <th>Revenue</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="">
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv8" id="input_val_serv8"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv8" id="val_serv_revenue_val_serv8" placeholder="$" onchange="calc_EVAL_pricing()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv9" id="input_val_serv9"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv9" id="val_serv_revenue_val_serv9" placeholder="$" onchange="calc_EVAL_pricing()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv10" id="input_val_serv10"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv10" id="val_serv_revenue_val_serv10" placeholder="$" onchange="calc_EVAL_pricing()"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_val_serv11" id="input_val_serv11"/></td>
+                                                        <td><input type="number" name="val_serv_revenue_val_serv11" id="val_serv_revenue_val_serv11" placeholder="$" onchange="calc_EVAL_pricing()"/></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <br>
+
+                                    </div>
+
+                                    <div class="form-group" style="outline-style: solid; outline-color:  #C4C3C1; outline-width: 1px;">
+                                       <label class="form-label"><h4>REAL TIME</h4></label>
+                                        <label class="form-label"> <i class="material-icons" style="font-size:20px;color:red;text-shadow:2px 2px 4px #000000;">alarm</i>API </label> <br>
+
+                                        <table id="" class="tablesorter" id="ticketLinesTable">
+                                                <thead>
+                                                    <tr style="background-color: #8C8984;color: black;">
+                                                        <th>Account Number</th>
+                                                        <th>Revenue</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="">
+                                                    <tr>
+                                                        <td><input type="number" name="input_rt0" id="input_rt0"/></td>
+                                                        <td><input type="number" name="rt_revenue_rt0" id="rt_revenue_rt0" onchange="calc_API()" placeholder="$"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_rt1" id="input_rt1"/></td>
+                                                        <td><input type="number" name="rt_revenue_rt1" id="rt_revenue_rt1" onchange="calc_API()" placeholder="$"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_rt2" id="input_rt2"/></td>
+                                                        <td><input type="number" name="rt_revenue_rt2" id="rt_revenue_rt2" onchange="calc_API()"  placeholder="$"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_rt3" id="input_rt3"/></td>
+                                                        <td><input type="number" name="rt_revenue_rt3" id="rt_revenue_rt3" onchange="calc_API()"  placeholder="$"/></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                        <br>
+                                        <label class="form-label"> <i class="material-icons" style="font-size:20px;color:red;text-shadow:2px 2px 4px #000000;">alarm</i>PIPE</label> <br>
+
+                                        <table id="" class="tablesorter" id="ticketLinesTable">
+                                                <thead>
+                                                    <tr style="background-color: #8C8984;color: black;">
+                                                        <th>Account Number</th>
+                                                        <th>Revenue</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="">
+                                                    <tr>
+                                                        <td><input type="number" name="input_rt4" id="input_rt4"/></td>
+                                                        <td><input type="number" name="rt_revenue_rt4" id="rt_revenue_rt4" onchange="calc_PIPE()" placeholder="$"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_rt5" id="input_rt5"/></td>
+                                                        <td><input type="number" name="rt_revenue_rt5" id="rt_revenue_rt5" onchange="calc_PIPE()"  placeholder="$"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_rt6" id="input_rt6"/></td>
+                                                        <td><input type="number" name="rt_revenue_rt6" id="rt_revenue_rt6" onchange="calc_PIPE()"  placeholder="$"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="number" name="input_rt7" id="input_rt7"/></td>
+                                                        <td><input type="number" name="rt_revenue_rt7" id="rt_revenue_rt7" onchange="calc_PIPE()"  placeholder="$"/></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                        <br>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </fieldset>
+
+                    <h3>data</h3>
+                    <fieldset>
+                        <h2>Client Name</h2>
+                        <br><br>
+                        <div class="fieldset-content" >
+                        <table id = "dataTable" class="tablesorter" id="ticketLinesTable">
+                        <thead>
+                          <tr style="background-color: #8C8984;color: black;">
+                            <th rowspan="2">Account #</th>
+                            <th rowspan="2">Account Type</th>
+                            <th rowspan="2">Team/Department</th>
+                            <th colspan="5">Contact Person(s)</th>
+                            
+                          </tr>
+                          <tr style="background-color: #8C8984;color: black;">
+                            <th>Name</th>
+                            <th>Phone#</th>
+                            <th>Email</th>
+                            <th>Position</th>
+                            <th>Note</th>
+                          </tr>
+                        </thead>
+                        <tbody id="showthis" class="labels">
+
+                            <!-- showing data data-->
+                            <tr>
+                                <td colspan="8">
+                                    <label for="data">LICENSE</label>
+                                    <input type="checkbox" name="data" id="data" data-toggle="toggle"><a href="#"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="hide">
+                            <tr>  
+                                <td><input type="number" name="ninthdata" disabled/></td>
+                                <td><input type="text" name="ninthdata_type" value="data" disabled/></td>
+                                <td><input type="text" name="data8_team" id="data8_team"/></td>
+                                <td><input type="text" name="data8_name" id="data8_name"/></td>
+                                <td><input type="text" name="data8_phone_number" id="data8_phone_number"/></td>
+                                <td><input type="text" name="data8_email" id="data8_email"/></td>
+                                <td><input type="text" name="data8_position" id="data8_position"/></td>
+                                <td><input type="text" name="data8_note" id="data8_note"/></td>
+
+                          </tr>
+
+                          <tr>
+                                <td><input type="number" name="tenthdata" disabled/></td>
+                                <td><input type="text" name="tenthdata_type" value="data" disabled/></td>
+                                <td><input type="text" name="data9_team" id="data9_team"/></td>
+                                <td><input type="text" name="data9_name" id="data9_name"/></td>
+                                <td><input type="text" name="data9_phone_number" id="data9_phone_number"/></td>
+                                <td><input type="text" name="data9_email" id="data9_email"/></td>
+                                <td><input type="text" name="data9_position" id="data9_position"/></td>
+                                <td><input type="text" name="data9_note" id="data9_note"/></td>
+                          </tr>
+
+                            <tr>
+                                <td><input type="number" name="11data" disabled/></td>
+                                <td><input type="text" name="11data_type" value="data" disabled/></td>
+                                <td><input type="text" name="data10_team" id="data10_team"/></td>
+                                <td><input type="text" name="data10_name" id="data10_name"/></td>
+                                <td><input type="text" name="data10_phone_number" id="data10_phone_number"/></td>
+                                <td><input type="text" name="data10_email" id="data10_email"/></td>
+                                <td><input type="text" name="data10_position" id="data10_position"/></td>
+                                <td><input type="text" name="data10_note" id="data10_note"/></td>
+                          </tr>
+
+                          <tr>
+                                <td><input type="number" name="12data" disabled/></td>
+                                <td><input type="text" name="12data_type" value="data" disabled/></td>
+                                <td><input type="text" name="data11_team" id="data11_team"/></td>
+                                <td><input type="text" name="data11_name" id="data11_name"/></td>
+                                <td><input type="text" name="data11_phone_number" id="data11_phone_number"/></td>
+                                <td><input type="text" name="data11_email" id="data11_email"/></td>
+                                <td><input type="text" name="data11_position" id="data11_position"/></td>
+                                <td><input type="text" name="data11_note" id="data11_note"/></td>
+                          </tr>
+                          </tbody>
+
+                          <!-- EVAL data -->
+                          <tbody class="labels">
+                            <tr>
+                                <td colspan="8">
+                                    <label for="EVAL">EVAL</label>
+                                    <input type="checkbox" name="EVAL" id="EVAL" data-toggle="toggle"><a href="#"></a>
+                                </td>
+                            </tr>
+                          </tbody>
+
+                          <tbody class="hide">
+                          <tr>
+                            <td><input type="number" name="0val_serv" disabled/></td>
+                            <td><input type="text" name="0val_serv_type" value="EVAL Cash" disabled/></td>
+                            <td><input type="text" name="val_serv0_team" id="val_serv0_team"/></td>
+                            <td><input type="text" name="val_serv0_name" id="val_serv0_name"/></td>
+                            <td><input type="text" name="val_serv0_name" id="val_serv0_phone_number"/></td>
+                            <td><input type="text" name="val_serv0_email" id="val_serv0_email"/></td>
+                            <td><input type="text" name="val_serv0_position" id="val_serv0_position"/></td>
+                            <td><input type="text" name="val_serv0_note" id="val_serv0_note"/></td>
+                          </tr>
+                          
+                            <tr>
+                            <td><input type="number" name="1val_serv" disabled /></td>
+                            <td><input type="text" name="1val_serv_type" value="EVAL Cash" disabled/></td>
+                            <td><input type="text" name="val_serv1_team" id="val_serv1_team"/></td>
+                            <td><input type="text" name="val_serv1_name" id="val_serv1_name"/></td>
+                            <td><input type="text" name="val_serv1_phone_number" id="val_serv1_phone_number"/></td>
+                            <td><input type="text" name="val_serv1_email" id="val_serv1_email"/></td>
+                            <td><input type="text" name="val_serv1_position" id="val_serv1_position"/></td>
+                            <td><input type="text" name="val_serv1_note" id="val_serv1_note"/></td>
+                          </tr>
+
+                            <tr>
+                            <td><input type="number" name="2val_serv" disabled/></td>
+                            <td><input type="text" name="2val_serv_type" value="EVAL Cash" disabled/></td>
+                            <td><input type="text" name="val_serv2_team" id="val_serv2_team"/></td>
+                            <td><input type="text" name="val_serv2_name" id="val_serv2_name"/></td>
+                            <td><input type="text" name="val_serv2_phone_number" id="val_serv2_phone_number"/></td>
+                            <td><input type="text" name="val_serv2_email" id="val_serv2_email"/></td>
+                            <td><input type="text" name="val_serv2_position" id="val_serv2_position"/></td>
+                            <td><input type="text" name="val_serv2_note" id="val_serv2_note"/></td>
+                          </tr>
+
+                            <tr>
+                            <td><input type="number" name="3val_serv" disabled/></td>
+                            <td><input type="text" name="3val_serv_type" value="EVAL Cash" disabled/></td>
+                            <td><input type="text" name="val_serv3_team" id="val_serv3_team"/></td>
+                            <td><input type="text" name="val_serv3_name" id="val_serv3_name"/></td>
+                            <td><input type="text" name="val_serv3_phone_number" id="val_serv3_phone_number"/></td>
+                            <td><input type="text" name="val_serv3_email" id="val_serv3_email"/></td>
+                            <td><input type="text" name="val_serv3_position" id="val_serv3_position"/></td>
+                            <td><input type="text" name="val_serv3_note" id="val_serv3_note"/></td>
+                          </tr>
+
+                        <tr>
+                            <td><input type="number" name="4val_serv" disabled/></td>
+                            <td><input type="text" name="4val_serv_type" value="EVAL OTC" disabled/></td>
+                            <td><input type="text" name="val_serv4_team" id="val_serv4_team"/></td>
+                            <td><input type="text" name="val_serv4_name" id="val_serv4_name"/></td>
+                            <td><input type="text" name="val_serv4_phone_number" id="val_serv4_phone_number"/></td>
+                            <td><input type="text" name="val_serv4_email" id="val_serv4_email"/></td>
+                            <td><input type="text" name="val_serv4_position" id="val_serv4_position"/></td>
+                            <td><input type="text" name="val_serv4_note" id="val_serv4_note"/></td>
+                          </tr>
+
+                            <tr>
+                            <td><input type="number" name="5val_serv" disabled /></td>
+                            <td><input type="text" name="5val_serv_type" value="EVAL OTC" disabled/></td>
+                            <td><input type="text" name="val_serv5_team" id="val_serv5_team"/></td>
+                            <td><input type="text" name="val_serv5_name" id="val_serv5_name"/></td>
+                            <td><input type="text" name="val_serv5_phone_number" id="val_serv5_phone_number"/></td>
+                            <td><input type="text" name="val_serv5_email" id="val_serv5_email"/></td>
+                            <td><input type="text" name="val_serv5_position" id="val_serv5_position"/></td>
+                            <td><input type="text" name="val_serv5_note" id="val_serv5_note"/></td>
+                          </tr>
+
+                            <tr>
+                            <td><input type="number" name="6val_serv" disabled/></td>
+                            <td><input type="text" name="6val_serv_type" value="EVAL OTC" disabled/></td>
+                            <td><input type="text" name="val_serv6_team" id="val_serv6_team"/></td>
+                            <td><input type="text" name="val_serv6_name" id="val_serv6_name"/></td>
+                            <td><input type="text" name="val_serv6_phone_number" id="val_serv6_phone_number"/></td>
+                            <td><input type="text" name="val_serv6_email" id="val_serv6_email"/></td>
+                            <td><input type="text" name="val_serv6_position" id="val_serv6_position"/></td>
+                            <td><input type="text" name="val_serv6_note" id="val_serv6_note"/></td>
+                          </tr>
+                            <tr>
+                            <td><input type="number" name="7val_serv" disabled/></td>
+                            <td><input type="text" name="7val_serv_type" value="EVAL OTC" disabled/></td>
+                            <td><input type="text" name="val_serv7_team" id="val_serv7_team"/></td>
+                            <td><input type="text" name="val_serv7_name" id="val_serv7_name"/></td>
+                            <td><input type="text" name="val_serv7_phone_number" id="val_serv7_phone_number"/></td>
+                            <td><input type="text" name="val_serv7_email" id="val_serv7_email"/></td>
+                            <td><input type="text" name="val_serv7_position" id="val_serv7_position"/></td>
+                            <td><input type="text" name="val_serv7_note" id="val_serv7_note"/></td>
+                          </tr>
+
+                          <tr>
+                            <td><input type="number" name="8val_serv" disabled/></td>
+                            <td><input type="text" name="8val_serv_type" value="Pricing/REG" disabled/></td>
+                            <td><input type="text" name="val_serv8_team" id="val_serv8_team"/></td>
+                            <td><input type="text" name="val_serv8_name" id="val_serv8_name"/></td>
+                            <td><input type="text" name="val_serv8_phone_number" id="val_serv8_phone_number"/></td>
+                            <td><input type="text" name="val_serv8_email" id="val_serv8_email"/></td>
+                            <td><input type="text" name="val_serv8_position" id="val_serv8_position"/></td>
+                            <td><input type="text" name="val_serv8_note" id="val_serv8_note"/></td>
+                          </tr>
+
+                            <tr>
+                            <td><input type="number" name="9val_serv" disabled /></td>
+                            <td><input type="text" name="9val_serv_type" value="Pricing/REG" disabled/></td>
+                            <td><input type="text" name="val_serv9_team" id="val_serv9_team"/></td>
+                            <td><input type="text" name="val_serv9_name" id="val_serv9_name"/></td>
+                            <td><input type="text" name="val_serv9_phone_number" id="val_serv9_phone_number"/></td>
+                            <td><input type="text" name="val_serv9_email" id="val_serv9_email"/></td>
+                            <td><input type="text" name="val_serv9_position" id="val_serv9_position"/></td>
+                            <td><input type="text" name="val_serv9_note" id="val_serv9_note"/></td>
+                          </tr>
+
+                            <tr>
+                            <td><input type="number" name="10val_serv" disabled/></td>
+                            <td><input type="text" name="10val_serv_type" value="Pricing/REG" disabled/></td>
+                            <td><input type="text" name="val_serv10_team" id="val_serv10_team"/></td>
+                            <td><input type="text" name="val_serv10_name" id="val_serv10_name"/></td>
+                            <td><input type="text" name="val_serv10_phone_number" id="val_serv10_phone_number"/></td>
+                            <td><input type="text" name="val_serv10_email" id="val_serv10_email"/></td>
+                            <td><input type="text" name="val_serv10_position" id="val_serv10_position"/></td>
+                            <td><input type="text" name="val_serv10_note" id="val_serv10_note"/></td>
+                          </tr>
+
+                            <tr>
+                            <td><input type="number" name="11val_serv" disabled/></td>
+                            <td><input type="text" name="11val_serv_type" value="Pricing/REG" disabled/></td>
+                            <td><input type="text" name="val_serv11_team" id="val_serv11_team"/></td>
+                            <td><input type="text" name="val_serv11_name" id="val_serv11_name"/></td>
+                            <td><input type="text" name="val_serv11_phone_number" id="val_serv11_phone_number"/></td>
+                            <td><input type="text" name="val_serv11_email" id="val_serv11_email"/></td>
+                            <td><input type="text" name="val_serv11_position" id="val_serv11_position"/></td>
+                            <td><input type="text" name="val_serv11_note" id="val_serv11_note"/></td>
+                          </tr>
+                        </tbody>
+
+                        <!-- real time data -->
+
+                        <tbody class="labels">
+                            <tr>
+                                <td colspan="8">
+                                    <label for="rt">REAL TIME / PIPE</label>
+                                    <input type="checkbox" name="rt" id="rt" data-toggle="toggle"><a href="#"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody class="hide">
+                            <tr>
+                                <td><input type="number" name="0rt" disabled/></td>
+                                <td><input type="text" name="0rt_type" value="API" disabled/></td>
+                                <td><input type="text" name="rt0_team" id="rt0_team" /></td>
+                                <td><input type="text" name="rt0_name" id="rt0_name"/></td>
+                                <td><input type="text" name="rt0_phone_number" id="rt0_phone_number"/></td>
+                                <td><input type="text" name="rt0_email" id="rt0_email"/></td>
+                                <td><input type="text" name="rt0_position" id="rt0_position"/></td>
+                                <td><input type="text" name="rt0_note" id="rt0_note"/></td>
+                              </tr>
+                                <tr>
+                                <td><input type="number" name="1rt" disabled/></td>
+                                <td><input type="text" name="1rt_type" value="API" disabled/></td>
+                                <td><input type="text" name="rt1_team" id="rt1_team" /></td>
+                                <td><input type="text" name="rt1_name" id="rt1_name"/></td>
+                                <td><input type="text" name="rt1_phone_number" id="rt1_phone_number"/></td>
+                                <td><input type="text" name="rt1_email" id="rt1_email"/></td>
+                                <td><input type="text" name="rt1_position" id="rt1_position"/></td>
+                                <td><input type="text" name="rt1_note" id="rt1_note"/></td>
+                              </tr>
+                                <tr>
+                                <td><input type="number" name="2rt" disabled/></td>
+                                <td><input type="text" name="2rt_type" value="API" disabled/></td>
+                                <td><input type="text" name="rt2_team" id="rt2_team" /></td>
+                                <td><input type="text" name="rt2_name" id="rt2_name"/></td>
+                                <td><input type="text" name="rt2_phone_number" id="rt2_phone_number"/></td>
+                                <td><input type="text" name="rt2_email" id="rt2_email"/></td>
+                                <td><input type="text" name="rt2_position" id="rt2_position"/></td>
+                                <td><input type="text" name="rt2_note" id="rt2_note"/></td>
+                              </tr>
+                                <tr>
+                                <td><input type="number" name="3rt" disabled/></td>
+                                <td><input type="text" name="3rt_type" value="API" disabled/></td>
+                                <td><input type="text" name="rt3_team" id="rt3_team" /></td>
+                                <td><input type="text" name="rt3_name" id="rt3_name"/></td>
+                                <td><input type="text" name="rt3_phone_number" id="rt3_phone_number"/></td>
+                                <td><input type="text" name="rt3_email" id="rt3_email"/></td>
+                                <td><input type="text" name="rt3_position" id="rt3_position"/></td>
+                                <td><input type="text" name="rt3_note" id="rt3_note"/></td>
+                              </tr>
+                            <tr>
+                                <td><input type="number" name="4rt" disabled/></td>
+                               <td><input type="text" name="4rt_type" value="PIPE" disabled/></td>
+                                <td><input type="text" name="rt4_team" id="rt4_team" /></td>
+                                <td><input type="text" name="rt4_name" id="rt4_name"/></td>
+                                <td><input type="text" name="rt4_phone_number" id="rt4_phone_number"/></td>
+                                <td><input type="text" name="rt4_email" id="rt4_email"/></td>
+                                <td><input type="text" name="rt4_position" id="rt4_position"/></td>
+                                <td><input type="text" name="rt4_note" id="rt4_note"/></td>
+                              </tr>
+                               <tr>
+                                <td><input type="number" name="5rt" disabled/></td>
+                                <td><input type="text" name="5rt_type" value="PIPE" disabled/></td>
+                                <td><input type="text" name="rt5_team" id="rt5_team" /></td>
+                                <td><input type="text" name="rt5_name" id="rt5_name"/></td>
+                                <td><input type="text" name="rt5_phone_number" id="rt5_phone_number"/></td>
+                                <td><input type="text" name="rt5_email" id="rt5_email"/></td>
+                                <td><input type="text" name="rt5_position" id="rt5_position"/></td>
+                                <td><input type="text" name="rt5_note" id="rt5_note"/></td>
+                              </tr>
+                               <tr>
+                                <td><input type="number" name="6rt" disabled/></td>
+                                <td><input type="text" name="6rt_type" value="PIPE" disabled/></td>
+                                <td><input type="text" name="rt6_team" id="rt6_team" /></td>
+                                <td><input type="text" name="rt6_name" id="rt6_name"/></td>
+                                <td><input type="text" name="rt6_phone_number" id="rt6_phone_number"/></td>
+                                <td><input type="text" name="rt6_email" id="rt6_email"/></td>
+                                <td><input type="text" name="rt6_position" id="rt6_position"/></td>
+                                <td><input type="text" name="rt6_note" id="rt6_note"/></td>
+                              </tr>
+                               <tr>
+                                <td><input type="number" name="7rt" disabled/></td>
+                                <td><input type="text" name="7rt_type" value="PIPE" disabled/></td>
+                                <td><input type="text" name="rt7_team" id="rt7_team" /></td>
+                                <td><input type="text" name="rt7_name" id="rt7_name"/></td>
+                                <td><input type="text" name="rt7_phone_number" id="rt7_phone_number"/></td>
+                                <td><input type="text" name="rt7_email" id="rt7_email"/></td>
+                                <td><input type="text" name="rt7_position" id="rt7_position"/></td>
+                                <td><input type="text" name="rt7_note" id="rt7_note"/></td>
+                              </tr>
+                          </tbody>
+                        </table>
+                        <br>
+                        <br>
+
+            <!-- APPLICATION -->
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-group">
+                                <label class="form-label"><h4>APPLICATIONS</h4></label>
+
+                                    <label class="container_checkbox">app1
+                                        <input type="checkbox" name="app1" value="app1" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">app2
+                                        <input type="checkbox" name="app2" value="app2" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">app3
+                                        <input type="checkbox" name="app3" value="app3" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"></label><br><br><br>
+                                    <label class="container_checkbox">app4
+                                            <input type="checkbox" name="app4" value="app4" >
+                                            <span class="checkmark"></span>
+                                    </label>
+
+                                    <label class="container_checkbox">app5
+                                            <input type="checkbox" name="app5" value="app5" >
+                                            <span class="checkmark"></span>
+                                    </label>
+
+                                    <label class="container_checkbox" >app6
+                                        <input type="checkbox" name="app6" value="app6" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-flex">
+                     <div class="form-group">
+                        <label class="form-label"></label>
+                            <label class="container_checkbox">Others, please specify:
+                                <input type="checkbox" name="data_app_others_1" value="data_app_others_1" >
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container_checkbox">Others, please specify:
+                                <input type="checkbox" name="data_app_others_2" value="data_app_others_2" >
+                                <span class="checkmark"></span>
+                            </label>
+                    </div>
+
+                            <div class="form-group">
+                                <input type="text" name="data_app_others_1_value" id="data_app_others_1_value" />
+                                <input type="text" name="data_app_others_2_value" id="data_app_others_2_value" />
+
+                            </div>
+
+
+                    </div>
+
+
+                    <!-- DATA WAREHOUSE -->
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-group">
+                                <label class="form-label"><h4>DATA WAREHOUSE </h4></label>
+                                    <label class="container_checkbox">DW1
+                                        <input type="checkbox" name="DW1" value="DW1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">DW2
+                                        <input type="checkbox" name="DW2" value="DW2">
+                                        <span class="checkmark"></span>
+                                    </label>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label"></label>
+                                <br><br><br>
+                                    <label class="container_checkbox">Others, please specify:
+                                        <input type="checkbox" name="data_edm_others_1" value="data_edm_others_1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Others, please specify:
+                                        <input type="checkbox" name="data_edm_others_2" value="data_edm_others_2">
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+
+                            <div class="form-group">
+                                <br><br><br>
+                                <input type="text" name="data_edm_others_1_value" id="data_edm_others_1_value" />
+                                <input type="text" name="data_edm_others_2_value" id="data_edm_others_2_value" />
+
+                            </div>
+                        </div>
+                    </div>
+
+<!--                     COMPETITORS USED -->
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-group">
+                                <label class="form-label"><h4>COMPETITORS USED</h4></label>
+
+                                    <label class="container_checkbox">Competitor1
+                                        <input type="checkbox" name="Competitor1" value="Competitor1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Competitor2
+                                        <input type="checkbox" name="Competitor2" value="Competitor2" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Competitor3
+                                        <input type="checkbox" name="Competitor3" value="Competitor3">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"></label>
+                                <br><br><br>
+                                    <label class="container_checkbox">Others, please specify:
+                                        <input type="checkbox" name="data_comp_others_1" value="data_comp_others_1" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Others, please specify:
+                                        <input type="checkbox" name="data_comp_others_2" value="data_comp_others_2">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Others, please specify:
+                                        <input type="checkbox" name="data_comp_others_3" value="data_comp_others_3 ">
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+
+                            <div class="form-group">
+                                <br><br><br>
+                                <input type="text" name="data_comp_others_1_value" id="data_comp_others_1_value" />
+                                <input type="text" name="data_comp_others_2_value" id="data_comp_others_2_value" />
+                                <input type="text" name="data_comp_others_3_value" id="data_comp_others_3_value" />
+                               
+                            </div>
+
+
+
+                        </div>
+                    </div>      
+
+<!--                     ADMIN  -->
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-group">
+                                <label class="form-label"><h4>ADMIN</h4></label>
+
+                                    <label class="container_checkbox">Admin1
+                                        <input type="checkbox" name="Admin1" value="Admin1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Admin2
+                                        <input type="checkbox" name="Admin2" value="Admin2" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Admin3
+                                        <input type="checkbox" name="Admin3" value="Admin3">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                       
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"></label>
+                                <br><br><br>
+                                    <label class="container_checkbox">Others, please specify:
+                                        <input type="checkbox" name="data_cust_others_1" value="data_cust_others_1" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Others, please specify:
+                                        <input type="checkbox" name="data_cust_others_2" value="data_cust_others_2">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Others, please specify:
+                                        <input type="checkbox" name="data_cust_others_3" value="data_cust_others_3 ">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    
+                            </div>
+
+                            <div class="form-group">
+                                <br><br><br>
+                                <input type="text" name="data_cust_others_1_value" id="data_cust_others_1_value" />
+                                <input type="text" name="data_cust_others_2_value" id="data_cust_others_2_value" />
+                                <input type="text" name="data_cust_others_3_value" id="data_cust_others_3_value" />
+                        
+                            </div>
+
+
+
+                        </div>
+                    </div>           
+
+            <!--  CLASS -->
+
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-group">
+                                <label class="form-label"><h4>CLASS (Needed)</h4></label>
+                                    <label class="container_checkbox">Class1
+                                        <input type="checkbox" name="Class1" value="Class1" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Class2
+                                        <input type="checkbox" name="Class2" value="Class2"  >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Class3
+                                        <input type="checkbox" name="Class3" value="Class3" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="form-label"><h4>CLASS (Currently Used)</h4></label>
+                                    <label class="container_checkbox">Class_1
+                                        <input type="checkbox" name="Class_1" value="Class_1" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Class_2
+                                        <input type="checkbox" name="Class_2" value="Class_2" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Class_3
+                                        <input type="checkbox" name="Class_3" value="Class_3">
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"></label><br><br><br>
+                                    <label class="container_checkbox">Others, please specify:
+                                        <input type="checkbox" name="data_AC_others" value="data_AC_others" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <input type=text  name="data_AC_others_value" id="data_AC_others_value">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-group">
+                                <label class="form-label"><h4> CATEGORIES</h4></label>
+                                    <label class="container_checkbox">CAT1
+                                        <input type="checkbox" name="CAT1" value="CAT1" >
+                                        <span class="checkmark"></span>
+                                    </label>
+
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"></label>
+                                <br><br><br>
+                                    <label class="container_checkbox">CAT2
+                                        <input type="checkbox" name="CAT2" value="CAT2" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"></label>
+                                <br><br><br>
+                                    <label class="container_checkbox">CAT3
+                                        <input type="checkbox" name="CAT3" value="CAT3">
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"></label>
+                                <br><br><br>
+                                    <label class="container_checkbox">CAT4
+                                        <input type="checkbox" name="CAT4" value="CAT4">
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- REAL TIME -->
+
+                    <div class="box-middatae">
+                                <h2>REAL TIME</h2>
+                    </div>
+
+                    <div class="form-row">
+                        <label class="form-label"><h4>AP</h4></label>
+                            <div class="custom-select" style="width:200px;">
+                              <select>
+                                <option value="0">Select securities:</option>
+                                <option value="0 - 500">0 - 500</option>
+                                <option value="0 - 5,000">0 - 5,000</option>
+                                <option value="5,000 - 10,000">5,000 - 10,000</option>
+                                <option value="10,000 - 15,000">10,000 - 15,000</option>
+                                <option value="15,000 - 20,000">15,000 - 20,000</option>
+                                <option value="20,000 - 50,000">20,000 - 50,000</option>
+                                <option value="50,000 - 100,000">50,000 - 100,000</option>
+                              </select>
+                            </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-group">
+                                <label class="form-label"><h4>PLATFORM</h4></label>
+                                    <label class="container_checkbox">P1
+                                        <input type="checkbox" name="P1" value="P1" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">P2
+                                        <input type="checkbox" name="P2" value="P2" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"></label>
+                                <br><br><br>
+                                    <label class="container_checkbox">P3
+                                        <input type="checkbox" name="P3" value="P3" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">P4
+                                        <input type="checkbox" name="P4" value="P4">
+                                        <span class="checkmark"></span>
+                                    </label>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                     <div class="form-row">
+                        <div class="form-flex">
+                            <div class="form-group">
+                                <label class="form-label"><h4>Extra</h4></label>
+                                    <label class="container_checkbox">Please specify
+                                        <input type="checkbox" name="" value="" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_checkbox">Please specify
+                                        <input type="checkbox" name="" value="" >
+                                        <span class="checkmark"></span>
+                                    </label>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label"></label>
+                                <br><br><br>
+
+                                        <input type=text  name="data_DC_others_value" id="data_DC_others_value">
+
+                                        <input type=text  name="data_DC_others_value" id="data_DC_others_value">
+
+                                        <input type=text  name="data_DC_others_value" id="data_DC_others_value">
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- NOTE -->
+
+                        <div class="form-row">
+                            <label class="form-label"><h4>NOTES</h4></label>
+                                <textarea  rows="10" cols="150" placeholder="additional notes" name="data_notes" id="data_notes"></textarea>
+                        </div>
+
+                    
+
+                    </fieldset>
+
+<!-- 
+
+                    <h3>EVAL/PRICING</h3>
+                    <fieldset>
+                        <h2>Client Name</h2>
+                        <br><br>
+
+
+
+                    </fieldset> -->
+
+                    <!-- REAL TIME PIPE -->
+
+
+
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="vendor/jquery-steps/jquery.steps.min.js"></script>
+    <script src="vendor/minimalist-picker/dobpicker.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/wnumb/wNumb.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    
+</body>
+
+</body>
+
+</html>
